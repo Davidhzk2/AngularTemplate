@@ -1,0 +1,72 @@
+
+
+<!-- <mat-dialog-content>
+    <h1 mat-dialog-title>Login</h1>  
+  <div class="col-12 col-lg-12" *ngIf="errorMessage">
+    <div class="alert alert-danger alert-dismissible" role="alert">
+      <div class="alert-message">
+        {{ errorMessage }}
+      </div>
+      <div class="spacer"></div>
+      <span (click)="close()" class="close" data-dismiss="alert">
+        <mat-icon>close</mat-icon>
+      </span>
+    </div>
+  </div>
+  <div class="form-content-inputs">
+    <mat-form-field>
+      <input
+        matInput
+        [(ngModel)]="loginData.email"
+        matInput
+        placeholder="Email"
+        required
+      /> 
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        [(ngModel)]="loginData.password"
+        matInput
+        [type]="text' " placeholder="Password"
+        required
+      />
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+        [attr.arial.pressed]="">
+        <mat-icon>{{hide ? 'visibility_off': 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <div class="">
+    <span>Create an account. <a (click)="closeForm()" href="#">Sign Up</a></span>
+  </div>
+  <button (click)="login()" class="btn" mat-raised-button>Login</button>
+</mat-dialog-actions> -->
+
+<form action="">
+  <label for="">some</label>  
+  <input type="text">
+  <label for="">some</label>  
+  <input type="text">
+</form>
+
+<!-- @for(item of usersData ; track item.id){
+<div class="let item of usersData">
+ <div class="" *ngFor="let item of usersData"> -->
+ <!-- <p>soome to say </p>
+  <h1>{{item.id}}</h1>
+</div> -->
+<!-- } -->
+
+<div *ngIf="usersData.length > 0; else noData">
+  <ul>
+    <li *ngFor="let item of usersData">
+      {{ item.email }} - {{ item.firstName}}
+    </li>
+  </ul>
+</div>
+<ng-template #noData>
+  <p>No hay datos disponibles.</p>
+</ng-template>
