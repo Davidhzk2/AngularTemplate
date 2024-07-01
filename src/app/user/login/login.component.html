@@ -1,56 +1,50 @@
-
-
-<!-- <mat-dialog-content>
-    <h1 mat-dialog-title>Login</h1>  
-  <div class="col-12 col-lg-12" *ngIf="errorMessage">
-    <div class="alert alert-danger alert-dismissible" role="alert">
-      <div class="alert-message">
-        {{ errorMessage }}
+<div class="card-container">
+  <mat-card appearance="outlined">
+  <mat-card-header>
+    <mat-card-title> Login</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form class="form-custom" [formGroup] = "formLogin">
+      <mat-form-field class="full-width">
+        <mat-label>Username</mat-label>
+        <input matInput formControlName="username" required>
+        <!-- <mat-error *ngIf="formLogin.get('username').invalid && formLogin.get('username').touched">
+          Username is required.
+        </mat-error> -->
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>Email</mat-label>
+        <input matInput type="text" formControlName="email" required>
+        <!-- <mat-error *ngIf="formLogin.get('email').invalid && formLogin.get('email').touched">
+          Password is required.
+        </mat-error> -->
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" formControlName="password" required>
+        <!-- <mat-error *ngIf="formLogin.get('password').invalid && formLogin.get('password').touched">
+          Password is required.
+        </mat-error> -->
+      </mat-form-field>
+      <div class="flex">
+        <button mat-flat-button color="primary" (click)="login()">Login</button>
+        <!-- <button mat-flat-button color="primary" (click)="">Registrase</button> -->
       </div>
-      <div class="spacer"></div>
-      <span (click)="close()" class="close" data-dismiss="alert">
-        <mat-icon>close</mat-icon>
-      </span>
-    </div>
-  </div>
-  <div class="form-content-inputs">
-    <mat-form-field>
-      <input
-        matInput
-        [(ngModel)]="loginData.email"
-        matInput
-        placeholder="Email"
-        required
-      /> 
-    </mat-form-field>
-    <mat-form-field>
-      <input
-        matInput
-        [(ngModel)]="loginData.password"
-        matInput
-        [type]="text' " placeholder="Password"
-        required
-      />
-      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
-        [attr.arial.pressed]="">
-        <mat-icon>{{hide ? 'visibility_off': 'visibility'}}</mat-icon>
-      </button>
-    </mat-form-field>
-  </div>
-</mat-dialog-content>
-<mat-dialog-actions>
-  <div class="">
-    <span>Create an account. <a (click)="closeForm()" href="#">Sign Up</a></span>
-  </div>
-  <button (click)="login()" class="btn" mat-raised-button>Login</button>
-</mat-dialog-actions> -->
+    </form>
+  </mat-card-content>
+</mat-card>
 
+</div>
+<!-- 
 <form action="">
-  <label for="">some</label>  
-  <input type="text">
-  <label for="">some</label>  
-  <input type="text">
-</form>
+    <input [(ngModel)]="loginData.name" type="text" placeholder="username">
+
+  
+    <input [(ngModel)]="loginData.password" type="password" placeholder="password">
+  
+
+  <button (click)="login()" class="button bg-btn" >resgistrar </button>
+</form> -->
 
 <!-- @for(item of usersData ; track item.id){
 <div class="let item of usersData">
@@ -59,7 +53,7 @@
   <h1>{{item.id}}</h1>
 </div> -->
 <!-- } -->
-
+<!-- 
 <div *ngIf="usersData.length > 0; else noData">
   <ul>
     <li *ngFor="let item of usersData">
@@ -69,4 +63,6 @@
 </div>
 <ng-template #noData>
   <p>No hay datos disponibles.</p>
-</ng-template>
+</ng-template> -->
+
+
